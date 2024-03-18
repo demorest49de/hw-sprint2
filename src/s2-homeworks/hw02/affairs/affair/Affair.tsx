@@ -4,7 +4,6 @@ import s from './Affair.module.css'
 import s2 from '../Affairs.module.css'
 
 type AffairPropsType = {
-    // key не нужно типизировать
     affair: AffairType
     deleteAffairCallback: any // need to fix any
 }
