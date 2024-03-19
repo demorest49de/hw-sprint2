@@ -5,8 +5,8 @@ import s from './Affairs.module.css'
 
 type AffairsPropsType = {
     data: Array<AffairType>
-    setFilter: React.Dispatch<React.SetStateAction<FilterType>>
-    deleteAffairCallback: any
+    setFilter: (value: FilterType) => void
+    deleteAffairCallback: (id: number) => void
     filter: FilterType
 }
 
@@ -33,7 +33,7 @@ function Affairs(props: AffairsPropsType) {
         <Affair
             key={a._id}
             affair={a}
-            deleteAffairCallback={props.deleteAffairCallback}
+            deleteAffairCallback={(id)=>props.deleteAffairCallback(id)}
         />
     ))
 
